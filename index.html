@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="app">
-    <div class="cart">
+    <div class="cart" @dragover.prevent @drop="dropToCart">
         <p>Cart({{ cart.length }})</p>
     </div>
     <product :premium="premium" @add-to-cart="updateCart"></product>
